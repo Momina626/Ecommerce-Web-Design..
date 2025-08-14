@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled Navbar</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+
+    <!-- ===== NAVBAR 1 ===== -->
+    <nav class="navbar">
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="media/logo-symbol.png" alt="Brand Logo" />
+        <span class="brand-name">Brand</span>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search" aria-label="Search" />
+        <select aria-label="Category">
+          <option>All category</option>
+          <option>Clothing</option>
+          <option>Electronics</option>
+          <option>Books</option>
+        </select>
+        <button type="button">Search</button>
+      </div>
+
+      <!-- Icons -->
+      <div class="icon-set">
+        <div class="icon-box">
+          <i class="fas fa-user"></i>
+          <p>Profile</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-comment-dots"></i>
+          <p>Message</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-heart"></i>
+          <p>Orders</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-shopping-cart"></i>
+          <p>My Cart</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== NAVBAR 2 ===== -->
+    <nav class="navbar2">
+
+      <!-- Left Menu -->
+      <div class="menu-left">
+        <span class="menu-icon" id="menu-toggle">&#9776;</span>
+        <div class="menu-items" id="menu-items">
+          <a href="productcard.html">All category</a>
+          <a href="#">Hot offers</a>
+          <a href="#">Gift boxes</a>
+          <a href="#">Projects</a>
+          <a href="#">Menu item</a>
+          <span class="help-dropdown">
+            Help
+            <select aria-label="Help Options" class="select">
+              <option>Contact</option>
+              <option>Support</option>
+              <option>FAQ</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Menu -->
+      <div class="menu-right">
+        <select class="select2" aria-label="Language and Currency">
+          <option value="en">English, USD</option>
+          <option value="uk">English, GBP</option>
+          <option value="fr">French, EUR</option>
+        </select>
+
+        <!-- Country Flag Dropdown -->
+        <div class="custom-select" id="country-select">
+          <button class="select-btn">
+            <p>Ship to</p>
+            <img src="https://flagcdn.com/de.svg" class="flag-icon" />
+            <span class="arrow">&#9662;</span>
+          </button>
+          <ul class="select-options">
+            <li data-value="de"><img src="https://flagcdn.com/de.svg" class="flag-icon" /></li>
+            <li data-value="us"><img src="https://flagcdn.com/us.svg" class="flag-icon" /></li>
+            <li data-value="uk"><img src="https://flagcdn.com/gb.svg" class="flag-icon" /></li>
+            <li data-value="in"><img src="https://flagcdn.com/in.svg" class="flag-icon" /></li>
+            <li data-value="ca"><img src="https://flagcdn.com/ca.svg" class="flag-icon" /></li>
+            <li data-value="au"><img src="https://flagcdn.com/au.svg" class="flag-icon" /></li>
+          </ul>
+          <input type="hidden" name="country" value="us" />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li class="active">Automobiles</li>
+        <li>Clothes and wear</li>
+        <li>Home interiors</li>
+        <li>Computer and tech</li>
+        <li>Tools, equipments</li>
+        <li>Sports and outdoor</li>
+        <li>Animal and pets</li>
+        <li>Machinery tools</li>
+        <li>More category</li>
+      </ul>
+    </div>
+
+    <!-- Main Banner -->
+    <div class="main-banner">
+      <div class="text-content">
+        <h2>Latest trending <br><strong>Electronic items</strong></h2>
+        <button class="learn-btn">Learn More</button>
+      </div>
+    </div>
+
+    <!-- Right Side Panel -->
+    <div class="right-panel">
+      <div class="user-box">
+        <div class="avatar">
+          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Avatar">
+        </div>
+        <div class="user-text">
+          <p>Hi, user</p>
+          <p class="light-text">let’s get started</p>
+        </div>
+        <button class="btn join">Join now</button>
+        <button class="btn login">Log in</button>
+      </div>
+
+      <div class="promo orange">
+        <p><strong>Get US $10 off</strong><br> with a new supplier</p>
+      </div>
+
+      <div class="promo blue">
+        <p>Send quotes with<br> supplier preferences</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deals Section -->
+  <div class="deals-container">
+    <!-- Left Section -->
+    <div class="deals-info">
+      <h2>Deals and offers</h2>
+      <p>Hygiene equipments</p>
+      <div class="countdown" id="countdown">
+        <div><span class="timespna" id="days">04</span><p class="spnap">Days</p></div>
+        <div><span class="timespna" id="hours">13</span><p class="spnap">Hour</p></div>
+        <div><span class="timespna" id="minutes">34</span><p class="spnap">Min</p></div>
+        <div><span class="timespna" id="seconds">56</span><p class="spnap">Sec</p></div>
+      </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="products">
+      <div class="product-card">
+        <img src="media/watch.png" alt="Smart Watch">
+        <p>Smart watches</p>
+        <span class="discount">-25%</span>
+      </div>
+      <div class="product-card">
+        <img src="media/laptop.png" alt="Laptops">
+        <p class="laptop">Laptops</p>
+        <span class="discount">-15%</span>
+      </div>
+      <div class="product-card">
+        <img src="media/cam.png" alt="GoPro Cameras">
+        <p class="cam">GoPro cameras</p>
+        <span class="discount">-40%</span>
+      </div>
+      <div class="product-card">
+        <img src="media/hp.png" alt="Headphones">
+        <p>Headphones</p>
+        <span class="discount">-25%</span>
+      </div>
+      <div class="product-card">
+        <img src="media/mob.png" alt="Canon Cameras">
+        <p>Canon cameras</p>
+        <span class="discount">-25%</span>
+      </div>
+    </div>
+  </div>
+  <div class="home-outdoor">
+
+  <div class="left-banner">
+    <h2>Home and outdoor</h2>
+    <button class="source-btn">Source now</button>
+  </div>
+
+  <div class="product-grid">
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Soft chairs</p>
+        <p class="price">From <span>USD 19</span></p>
+      </div>
+      <img src="media/1.png" alt="Soft chairs">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Sofa & chair</p>
+        <p class="price">From <span>USD 19</span></p>
+      </div>
+      <img src="media/1.png" alt="Sofa and chair">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Kitchen dishes</p>
+        <p class="price">From <span>USD 19</span></p>
+      </div>
+      <img src="media/3.jpg" alt="Kitchen dishes">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Smart watches</p>
+        <p class="price">From <span>USD 19</span></p>
+      </div>
+      <img src="media/watch.png" alt="Smart watches">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Kitchen mixer</p>
+        <p class="price">From <span>USD 100</span></p>
+      </div>
+      <img src="media/5.png" alt="Kitchen mixer">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Blenders</p>
+        <p class="price">From <span>USD 39</span></p>
+      </div>
+      <img src="media/6.png" alt="Blenders">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Home appliance</p>
+        <p class="price">From <span>USD 19</span></p>
+      </div>
+      <img src="media/2.png" alt="Home appliance">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Coffee maker</p>
+        <p class="price">From <span>USD 10</span></p>
+      </div>
+      <img src="media/8.png" alt="Coffee maker">
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="home-outdoor">
+
+  <div class="left-banner-gadgets">
+    <h2>Consumer electronics and gadgets</h2>
+    <button class="source-btn">Source now</button>
+  </div>
+
+  <div class="product-grid">
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Smart watches</p>
+        <p class="price">From <span>USD 19</span></p>
+      </div>
+      <img src="media/watch.png" alt="Smart watch">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Cameras</p>
+        <p class="price">From <span>USD 89</span></p>
+      </div>
+      <img src="media/cam.png" alt="Cameras">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Headphones</p>
+        <p class="price">From <span>USD 10</span></p>
+      </div>
+      <img src="media/hp.png" alt="Headphones">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Smart watches</p>
+        <p class="price">From <span>USD 90</span></p>
+      </div>
+      <img src="media/watch.png" alt="Smart watch">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Gaming set</p>
+        <p class="price">From <span>USD 35</span></p>
+      </div>
+      <img src="media/gam.webp" alt="Gaming set">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Laptops & PC</p>
+        <p class="price">From <span>USD 340</span></p>
+      </div>
+      <img src="media/laptop.png" alt="Laptop and PC">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Smartphones</p>
+        <p class="price">From <span>USD 19</span></p>
+      </div>
+      <img src="media/mob.png" alt="Smartphone">
+    </div>
+
+    <div class="banner-card">
+      <div class="text">
+        <p class="title">Electric kettle</p>
+        <p class="price">From <span>USD 240</span></p>
+      </div>
+      <img src="media/8.png" alt="Electric kettle">
+    </div>
+
+  </div>
+</div>
+
+<div class="request-banner">
+
+  <!-- Left text section -->
+  <div class="banner-text">
+    <h2>An easy way to send <br> requests to all suppliers</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+  </div>
+
+  <!-- Right form section -->
+  <form class="quote-form" id="quoteForm">
+    <h3>Send quote to suppliers</h3>
+   <input type="text" id="itemName" value="What item you need?" 
+       onfocus="if(this.value=='What item you need?') this.value='';" 
+       onblur="if(this.value=='') this.value='What item you need?';">
+
+    <textarea id="itemDetails" placeholder="Type more details"></textarea>
+
+    <div class="quantity-row">
+      <input type="number" id="quantity" placeholder="Quantity" />
+      <select id="unit">
+        <option value="">Select</option>
+        <option>Pcs</option>
+        <option>Kg</option>
+        <option>Box</option>
+      </select>
+    </div>
+
+    <button type="submit" class="send-btn">Send inquiry</button>
+  </form>
+  
+
+</div>
+
+       
+   <h2 class="custom-product-heading">Recommended Products</h2>
+   <div class="custom-product-grid">
+    
+  <div class="custom-product-card">
+    <img src="./media/p1.png" alt="T-shirt">
+    <div class="custom-product-price">$10.30</div>
+    <div class="custom-product-desc">T-shirts with multiple colors, for men</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="./media/p2.png" alt="Jeans shorts">
+    <div class="custom-product-price">$10.30</div>
+    <div class="custom-product-desc">Jeans shorts for men blue color</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="./media/p3.jpg" alt="Winter coat">
+    <div class="custom-product-price">$12.50</div>
+    <div class="custom-product-desc">Brown winter coat medium size</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="./media/p4.png" alt="Jeans bag">
+    <div class="custom-product-price">$34.00</div>
+    <div class="custom-product-desc">Jeans bag for travel for men</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="./media/p5.png" alt="Leather wallet">
+    <div class="custom-product-price">$99.00</div>
+    <div class="custom-product-desc">Leather wallet</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="./media/cam.png" alt="Camera">
+    <div class="custom-product-price">$9.99</div>
+    <div class="custom-product-desc">Canon camera black, 100x zoom</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="./media/gam.webp" alt="Headset">
+    <div class="custom-product-price">$8.99</div>
+    <div class="custom-product-desc">Headset for gaming with mic</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="media/watch.png" alt="Smartwatch">
+    <div class="custom-product-price">$10.30</div>
+    <div class="custom-product-desc">Smartwatch silver color modern</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="./media/p5.png" alt="Blue wallet">
+    <div class="custom-product-price">$10.30</div>
+    <div class="custom-product-desc">Blue wallet for men leather material</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+
+  <div class="custom-product-card">
+    <img src="media/8.png" alt="Jeans bag">
+    <div class="custom-product-price">$80.95</div>
+    <div class="custom-product-desc">Jeans bag for travel for men</div>
+    <div class="icon-product">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+                    </div>
+  </div>
+</div>
+
+
+
+
+  <section class="services-section">
+    <h2>Our extra services</h2>
+    <div class="services-grid">
+
+      <div class="service-card" style="background-image: url('media/img\ 1.png');">
+        <div class="service-info">
+          <div class="service-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="service-text">
+            <p>Source from<br>Industry Hubs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" style="background-image: url('media/img\ 2.png');">
+        <div class="service-info">
+          <div class="service-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <div class="service-text">
+            <p>Customize Your<br>Products</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" style="background-image: url('media/img\ 3.png');">
+        <div class="service-info">
+          <div class="service-icon">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <div class="service-text">
+            <p>Fast, reliable shipping<br>by ocean or air</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" style="background-image: url('media/img\ 4.png');">
+        <div class="service-info">
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="service-text">
+            <p>Product monitoring<br>and inspection</p>
+             
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+ 
+  <section class="suppliers-section">
+    <h2>Suppliers by region</h2>
+
+    <div class="suppliers-grid">
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE">
+        <div>
+          <p>Arabic Emirates</p>
+          <span>shopname.ae</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg" alt="Australia">
+        <div>
+          <p>Australia</p>
+          <span>shopname.ae</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA">
+        <div>
+          <p>United States</p>
+          <span>shopname</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" alt="Russia">
+        <div>
+          <p>Russia</p>
+          <span>shopname.ru</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italy">
+        <div>
+          <p>Italy</p>
+          <span>shopname.it</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg" alt="Denmark">
+        <div>
+          <p>Denmark</p>
+          <span>denmark.com.dk</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="France">
+        <div>
+          <p>France</p>
+          <span>shopname.com.fr</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="UAE">
+        <div>
+          <p>Arabic Emirates</p>
+          <span>shopname.ae</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="China">
+        <div>
+          <p>China</p>
+          <span>shopname.ae</span>
+        </div>
+      </div>
+
+      <div class="supplier-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK">
+        <div>
+          <p>Great Britain</p>
+          <span>shopname.co.uk</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+ 
+   <section class="newsletter-section">
+    <h2>Subscribe on our newsletter</h2>
+    <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+    
+    <div class="subscribe-form">
+      <div class="input-wrapper">
+        <span class="email-icon"><i class="fas fa-envelope"></i></span>
+        <input type="email" placeholder="Email">
+      </div>
+      <button>Subscribe</button>
+    </div>
+  </section>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Brand Section -->
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="media/logo-symbol.png" alt="Brand Logo" />
+          <span class="brand-name">Brand</span>
+        </div>
+        <p>Best information about the company<br> goes here but now lorem ipsum is</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categories</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Partnership</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categories</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li>Help Center</li>
+            <li>Money Refund</li>
+            <li>Shipping</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div>
+          <h4>For users</h4>
+          <ul>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Settings</li>
+            <li>My Orders</li>
+          </ul>
+        </div>
+
+        <!-- App Download -->
+        <div class="get-app">
+          <h4>Get app</h4>
+          <img src="media/Group.png" alt="App Store" />
+          <img src="media/market-button.png" alt="Google Play" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>© 2023 Ecommerce.</p>
+    <div class="language-select">
+      <img src="https://flagcdn.com/us.svg" width="20" alt="English Flag" />
+      English <i class="fas fa-chevron-up"></i>
+    </div>
+  </div>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    /* ================== CUSTOM FLAG DROPDOWN ================== */
+    const customSelect = document.getElementById('country-select');
+    const selectBtn = customSelect.querySelector('.select-btn');
+    const options = customSelect.querySelector('.select-options');
+    const flagImg = selectBtn.querySelector('.flag-icon');
+    const hiddenInput = customSelect.querySelector('input');
+
+    selectBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      options.classList.toggle('show-options');
+    });
+
+    options.querySelectorAll('li').forEach(option => {
+      option.addEventListener('click', function () {
+        flagImg.src = this.querySelector('img').src;
+        hiddenInput.value = this.dataset.value;
+        options.classList.remove('show-options');
+      });
+    });
+
+    window.addEventListener('click', () => options.classList.remove('show-options'));
+
+    /* ================== MENU TOGGLE ================== */
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.getElementById('menu-items');
+
+    if (menuToggle && menuItems) {
+      menuToggle.addEventListener('click', function () {
+        menuItems.classList.toggle('show');
+      });
+    }
+
+    /* ================== SIDEBAR ACTIVE ================== */
+    const items = document.querySelectorAll('.sidebar li');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+
+    /* ================== COUNTDOWN TIMER ================== */
+    const countdownDate = new Date().getTime() + (4 * 24 * 60 * 60 * 1000);
+
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

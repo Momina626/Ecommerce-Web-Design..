@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled Navbar</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+
+    <!-- ===== NAVBAR 1 ===== -->
+    <nav class="navbar">
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="media/logo-symbol.png" alt="Brand Logo" />
+        <span class="brand-name">Brand</span>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search" aria-label="Search" />
+        <select aria-label="Category">
+          <option>All category</option>
+          <option>Clothing</option>
+          <option>Electronics</option>
+          <option>Books</option>
+        </select>
+        <button type="button">Search</button>
+      </div>
+
+      <!-- Icons -->
+      <div class="icon-set">
+        <div class="icon-box">
+          <i class="fas fa-user"></i>
+          <p>Profile</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-comment-dots"></i>
+          <p>Message</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-heart"></i>
+          <p>Orders</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-shopping-cart"></i>
+          <p>My Cart</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== NAVBAR 2 ===== -->
+    <nav class="navbar2">
+
+      <!-- Left Menu -->
+      <div class="menu-left">
+        <span class="menu-icon" id="menu-toggle">&#9776;</span>
+        <div class="menu-items" id="menu-items">
+          <a href="product.html">All category</a>
+          <a href="#">Hot offers</a>
+          <a href="#">Gift boxes</a>
+          <a href="#">Projects</a>
+          <a href="#">Menu item</a>
+          <span class="help-dropdown">
+            Help
+            <select aria-label="Help Options" class="select">
+              <option>Contact</option>
+              <option>Support</option>
+              <option>FAQ</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Menu -->
+      <div class="menu-right">
+        <select class="select2" aria-label="Language and Currency">
+          <option value="en">English, USD</option>
+          <option value="uk">English, GBP</option>
+          <option value="fr">French, EUR</option>
+        </select>
+
+        <!-- Country Flag Dropdown -->
+        <div class="custom-select" id="country-select">
+          <button class="select-btn">
+            <p>Ship to</p>
+            <img src="https://flagcdn.com/de.svg" class="flag-icon" />
+            <span class="arrow">&#9662;</span>
+          </button>
+          <ul class="select-options">
+            <li data-value="de"><img src="https://flagcdn.com/de.svg" class="flag-icon" /></li>
+            <li data-value="us"><img src="https://flagcdn.com/us.svg" class="flag-icon" /></li>
+            <li data-value="uk"><img src="https://flagcdn.com/gb.svg" class="flag-icon" /></li>
+            <li data-value="in"><img src="https://flagcdn.com/in.svg" class="flag-icon" /></li>
+            <li data-value="ca"><img src="https://flagcdn.com/ca.svg" class="flag-icon" /></li>
+            <li data-value="au"><img src="https://flagcdn.com/au.svg" class="flag-icon" /></li>
+          </ul>
+          <input type="hidden" name="country" value="us" />
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="#">Home</a>
+      <span class="separator">›</span>
+      <a href="#">Clothings</a>
+      <span class="separator">›</span>
+      <a href="#">Men's wear</a>
+      <span class="separator">›</span>
+      <span class="current">Summer clothing</span>
+    </nav>
+    <div class="product-container">
+        <div class="product-images">
+            <div class="main-image">
+                <img id="mainProductImage" src="./media/Thumbnail 1.webp" alt="Main product image">
+            </div>
+            <div class="thumbnail-images">
+                <img src="./media/Thumbnail 1.webp" alt="Thumbnail 1">
+                <img src="./media/Thumbnail 2.webp" alt="Thumbnail 2">
+                <img src="./media/Thumbnail 3.webp" alt="Thumbnail 3">
+                <img src="./media/Thumbnail 4.webp" alt="Thumbnail 4">
+                <img src="./media/Thumbnail 5.webp" alt="Thumbnail 5">
+            </div>
+        </div>
+
+        <div class="product-details-and-supplier">
+            <div class="product-details">
+                <div class="stock-status">
+                    <i class="fa-solid fa-circle-check" style="color:green;"></i> In stock
+                </div>
+                <h1>Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h1>
+                <div class="reviews">
+                    <span class="stars">
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star" style="color:gold;"></i>
+                        <i class="fa-solid fa-star-half-stroke" style="color:gold;"></i>
+                    </span>
+                    <span class="score">9.3</span>
+                    <span>32 reviews</span>
+                    <span>•</span>
+                    <span>154 sold</span>
+                </div>
+                <div class="pricing">
+                    <div class="price-tier">
+                        <div class="price">$98.00</div>
+                        <div class="quantity">50-100 pcs</div>
+                    </div>
+                    <div class="price-tier">
+                        <div class="price">$90.00</div>
+                        <div class="quantity">100-700 pcs</div>
+                    </div>
+                    <div class="price-tier">
+                        <div class="price">$78.00</div>
+                        <div class="quantity">700+ pcs</div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-dollar-sign"></i> Price:</span>
+                        <span class="value">Negotiable</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-shoe-prints"></i> Type:</span>
+                        <span class="value">Classic shoes</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-cube"></i> Material:</span>
+                        <span class="value">Plastic material</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-paint-brush"></i> Design:</span>
+                        <span class="value">Modern nice</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-pen"></i> Customization:</span>
+                        <span class="value">Customized logo and design custom packages</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-shield-halved"></i> Protection:</span>
+                        <span class="value">Refund Policy</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label"><i class="fa-solid fa-award"></i> Warranty:</span>
+                        <span class="value">2 years full warranty</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="supplier-info">
+                <div class="supplier-header">
+                    <div class="supplier-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="supplier-details">
+                        <div class="supplier-label">Supplier</div>
+                        <div class="supplier-name">Guanjoi Trading LLC</div>
+                    </div>
+                </div>
+                <div class="supplier-meta">
+                    <div class="meta-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Germany, Berlin</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa-solid fa-circle-check" style="color:green;"></i>
+                        <span>Verified Seller</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Worldwide shipping</span>
+                    </div>
+                </div>
+                <div class="supplier-actions">
+                    <button class="primary-button"><i class="fa-solid fa-envelope"></i> Send inquiry</button>
+                    <button class="secondary-button"><i class="fa-solid fa-user"></i> Seller's profile</button>
+                    <button class="tertiary-button" id="saveButton">
+                        <i id="heartIcon" class="fa-regular fa-heart"></i> Save for later
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="pro">
+     <div class="details">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  
+        Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+
+    <table class="product-table">
+        <tr>
+            <td>Model</td>
+            <td>#8786867</td>
+        </tr>
+        <tr>
+            <td>Style</td>
+            <td>Classic style</td>
+        </tr>
+        <tr>
+            <td>Certificate</td>
+            <td>ISO-898921212</td>
+        </tr>
+        <tr>
+            <td>Size</td>
+            <td>34mm x 450mm x 19mm</td>
+        </tr>
+        <tr>
+            <td>Memory</td>
+            <td>36GB RAM</td>
+        </tr>
+    </table>
+
+    <ul class="feature-list">
+        <li>Some great feature name here</li>
+        <li>Lorem ipsum dolor sit amet, consectetur</li>
+        <li>Duis aute irure dolor in reprehenderit</li>
+        <li>Some great feature name here</li>
+    </ul>
+</div>
+<div class="product-suggestions">
+    <h3>You may like</h3>
+
+    <div class="product-item">
+        <img src="./media/p3.jpg" alt="Men Blazers Sets Elegant Formal">
+        <div class="product-info">
+            <p class="product-name">Men Blazers Sets Elegant Formal</p>
+            <p class="product-price">$7.00 - $99.50</p>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="./media/p1.png" alt="Men Shirt Sleeve Polo Contrast">
+        <div class="product-info">
+            <p class="product-name">Men Shirt Sleeve Polo Contrast</p>
+            <p class="product-price">$7.00 - $99.50</p>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="./media/watch.png" alt="Apple Watch Series Space Gray">
+        <div class="product-info">
+            <p class="product-name">Apple Watch Series Space Gray</p>
+            <p class="product-price">$7.00 - $99.50</p>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="./media/Basket crew.png" alt="Basketball Crew Socks Long Stuff">
+        <div class="product-info">
+            <p class="product-name">Basketball Crew Socks Long Stuff</p>
+            <p class="product-price">$7.00 - $99.50</p>
+        </div>
+    </div>
+
+    <div class="product-item">
+        <img src="./media/Thumbnail 1.webp" alt="New Summer Men's Castrol T-Shirts">
+        <div class="product-info">
+            <p class="product-name">New Summer Men's castrol T-Shirts</p>
+            <p class="product-price">$7.00 - $99.50</p>
+        </div>
+    </div>
+
+</div>
+   </div>
+   <div class="related-products-container">
+    <h3 class="related-products-title">Related products</h3>
+    <div class="related-products-list">
+        
+        <div class="related-product-card">
+            <img src="./media/1.png" alt="Xiaomi Redmi 8 Original">
+            <p class="related-product-name">Xiaomi Redmi 8 Original</p>
+            <p class="related-product-price">$32.00–$40.00</p>
+        </div>
+
+        <div class="related-product-card">
+            <img src="./media/3.jpg" alt="Xiaomi Redmi 8 Original">
+            <p class="related-product-name">Xiaomi Redmi 8 Original</p>
+            <p class="related-product-price">$32.00–$40.00</p>
+        </div>
+
+        <div class="related-product-card">
+            <img src="./media/gam.webp" alt="Xiaomi Redmi 8 Original">
+            <p class="related-product-name">Xiaomi Redmi 8 Original</p>
+            <p class="related-product-price">$32.00–$40.00</p>
+        </div>
+
+        <div class="related-product-card">
+            <img src="./media/watch.png" alt="Xiaomi Redmi 8 Original">
+            <p class="related-product-name">Xiaomi Redmi 8 Original</p>
+            <p class="related-product-price">$32.00–$40.00</p>
+        </div>
+
+        <div class="related-product-card">
+            <img src="./media/8.png" alt="Xiaomi Redmi 8 Original">
+            <p class="related-product-name">Xiaomi Redmi 8 Original</p>
+            <p class="related-product-price">$32.00–$40.00</p>
+        </div>
+
+        <div class="related-product-card">
+            <img src="./media/6.png" alt="Xiaomi Redmi 8 Original">
+            <p class="related-product-name">Xiaomi Redmi 8 Original</p>
+            <p class="related-product-price">$32.00–$40.00</p>
+        </div>
+
+    </div>
+</div>
+<div class="discount-banner">
+        <div class="discount-banner-text">
+            <h2>Super discount on more than 100 USD</h2>
+            <p>Have you ever finally just write dummy info</p>
+        </div>
+        <a href="#" class="discount-banner-btn">Shop now</a>
+    </div>
+
+
+    
+
+  
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Brand Section -->
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="media/logo-symbol.png" alt="Brand Logo" />
+          <span class="brand-name">Brand</span>
+        </div>
+        <p>Best information about the company<br> goes here but now lorem ipsum is</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categories</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Partnership</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categories</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li>Help Center</li>
+            <li>Money Refund</li>
+            <li>Shipping</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div>
+          <h4>For users</h4>
+          <ul>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Settings</li>
+            <li>My Orders</li>
+          </ul>
+        </div>
+
+        <!-- App Download -->
+        <div class="get-app">
+          <h4>Get app</h4>
+          <img src="media/Group.png" alt="App Store" />
+          <img src="media/market-button.png" alt="Google Play" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>© 2023 Ecommerce.</p>
+    <div class="language-select">
+      <img src="https://flagcdn.com/us.svg" width="20" alt="English Flag" />
+      English <i class="fas fa-chevron-up"></i>
+    </div>
+  </div>
+
+
+ 
+    
+
+    <!-- JavaScript -->
+    <script>
+        // === Change main image when thumbnail is clicked ===
+        const mainImage = document.getElementById('mainProductImage');
+        const thumbnails = document.querySelectorAll('.thumbnail-images img');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function () {
+                mainImage.src = this.src;
+
+                // Highlight active thumbnail
+                thumbnails.forEach(img => img.style.border = 'none');
+                this.style.border = '2px solid #000';
+            });
+        });
+        // Example: Show alert on click
+document.querySelectorAll('.product-item').forEach(item => {
+    item.addEventListener('click', () => {
+        alert(`You clicked: ${item.querySelector('.product-name').textContent}`);
+    });
+});
+// Auto horizontal scrolling for related products
+const relatedProductsList = document.querySelector('.related-products-list');
+
+let scrollStep = 0;
+setInterval(() => {
+    relatedProductsList.scrollBy({ left: 170, behavior: 'smooth' });
+    scrollStep += 170;
+    if (scrollStep >= relatedProductsList.scrollWidth) {
+        relatedProductsList.scrollTo({ left: 0, behavior: 'smooth' });
+        scrollStep = 0;
+    }
+}, 4000);
+ /* ================== MENU TOGGLE ================== */
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.getElementById('menu-items');
+
+    if (menuToggle && menuItems) {
+      menuToggle.addEventListener('click', function () {
+        menuItems.classList.toggle('show');
+      });
+    }
+        
+
+        // === Toggle heart icon ===
+        const heartIcon = document.getElementById('heartIcon');
+        const saveButton = document.getElementById('saveButton');
+
+        saveButton.addEventListener('click', function () {
+            if (heartIcon.classList.contains('fa-regular')) {
+                heartIcon.classList.remove('fa-regular');
+                heartIcon.classList.add('fa-solid');
+                heartIcon.style.color = 'red';
+            } else {
+                heartIcon.classList.remove('fa-solid');
+                heartIcon.classList.add('fa-regular');
+                heartIcon.style.color = '';
+            }
+        });
+    </script>
+</body>
+</html>

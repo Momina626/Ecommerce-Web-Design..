@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled Navbar</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+
+    <!-- ===== NAVBAR 1 ===== -->
+    <nav class="navbar">
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="media/logo-symbol.png" alt="Brand Logo" />
+        <span class="brand-name">Brand</span>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search" aria-label="Search" />
+        <select aria-label="Category">
+          <option>All category</option>
+          <option>Clothing</option>
+          <option>Electronics</option>
+          <option>Books</option>
+        </select>
+        <button type="button">Search</button>
+      </div>
+
+      <!-- Icons -->
+      <div class="icon-set">
+        <div class="icon-box">
+          <i class="fas fa-user"></i>
+          <p>Profile</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-comment-dots"></i>
+          <p>Message</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-heart"></i>
+          <p>Orders</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-shopping-cart"></i>
+          <p>My Cart</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== NAVBAR 2 ===== -->
+    <nav class="navbar2">
+
+      <!-- Left Menu -->
+      <div class="menu-left">
+        <span class="menu-icon" id="menu-toggle">&#9776;</span>
+        <div class="menu-items" id="menu-items">
+          <a href="productcard.html">All category</a>
+          <a href="#">Hot offers</a>
+          <a href="#">Gift boxes</a>
+          <a href="#">Projects</a>
+          <a href="#">Menu item</a>
+          <span class="help-dropdown">
+            Help
+            <select aria-label="Help Options" class="select">
+              <option>Contact</option>
+              <option>Support</option>
+              <option>FAQ</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Menu -->
+      <div class="menu-right">
+        <select class="select2" aria-label="Language and Currency">
+          <option value="en">English, USD</option>
+          <option value="uk">English, GBP</option>
+          <option value="fr">French, EUR</option>
+        </select>
+
+        <!-- Country Flag Dropdown -->
+        <div class="custom-select" id="country-select">
+          <button class="select-btn">
+            <p>Ship to</p>
+            <img src="https://flagcdn.com/de.svg" class="flag-icon" />
+            <span class="arrow">&#9662;</span>
+          </button>
+          <ul class="select-options">
+            <li data-value="de"><img src="https://flagcdn.com/de.svg" class="flag-icon" /></li>
+            <li data-value="us"><img src="https://flagcdn.com/us.svg" class="flag-icon" /></li>
+            <li data-value="uk"><img src="https://flagcdn.com/gb.svg" class="flag-icon" /></li>
+            <li data-value="in"><img src="https://flagcdn.com/in.svg" class="flag-icon" /></li>
+            <li data-value="ca"><img src="https://flagcdn.com/ca.svg" class="flag-icon" /></li>
+            <li data-value="au"><img src="https://flagcdn.com/au.svg" class="flag-icon" /></li>
+          </ul>
+          <input type="hidden" name="country" value="us" />
+        </div>
+      </div>
+    </nav>
+  </header>
+   <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="#">Home</a>
+      <span class="separator">›</span>
+      <a href="#">Clothings</a>
+      <span class="separator">›</span>
+      <a href="#">Men's wear</a>
+      <span class="separator">›</span>
+      <span class="current">Summer clothing</span>
+    </nav>
+  <div class="content">
+    
+  <!-- Sidebar -->
+  <aside class="filter-sidebar">
+    <!-- Category -->
+    <details open class="filter-group">
+      <summary class="filter-title">Category</summary>
+      <ul class="filter-list">
+        <li>Mobile accessory</li>
+        <li>Electronics</li>
+        <li>Smartphones</li>
+        <li>Modern tech</li>
+      </ul>
+      <a href="#" class="filter-link">See all</a>
+    </details>
+
+    <!-- Brands -->
+    <details open class="filter-group">
+      <summary class="filter-title">Brands</summary>
+      <ul class="filter-list">
+        <li><label><input type="checkbox" checked> Samsung</label></li>
+        <li><label><input type="checkbox" checked> Apple</label></li>
+        <li><label><input type="checkbox"> Huawei</label></li>
+        <li><label><input type="checkbox" checked> Poco</label></li>
+        <li><label><input type="checkbox"> Lenovo</label></li>
+      </ul>
+      <a href="#" class="filter-link">See all</a>
+    </details>
+
+    <!-- Features -->
+    <details open class="filter-group">
+      <summary class="filter-title">Features</summary>
+      <ul class="filter-list">
+        <li><label><input type="checkbox" checked> Metallic</label></li>
+        <li><label><input type="checkbox"> Plastic cover</label></li>
+        <li><label><input type="checkbox"> 8GB Ram</label></li>
+        <li><label><input type="checkbox"> Super power</label></li>
+        <li><label><input type="checkbox"> Large Memory</label></li>
+      </ul>
+      <a href="#" class="filter-link">See all</a>
+    </details>
+
+    <!-- Price Range -->
+    <details open class="filter-group">
+      <summary class="filter-title">Price range</summary>
+      <div class="filter-range">
+        <input type="number" placeholder="Min"> -
+        <input type="number" placeholder="Max">
+      </div>
+    </details>
+
+    <!-- Condition -->
+    <details open class="filter-group">
+      <summary class="filter-title">Condition</summary>
+      <ul class="filter-list">
+        <li><label><input type="checkbox"> Brand new</label></li>
+        <li><label><input type="checkbox"> Used</label></li>
+        <li><label><input type="checkbox"> Refurbished</label></li>
+      </ul>
+    </details>
+
+    <!-- Ratings -->
+    <details open class="filter-group">
+      <summary class="filter-title">Ratings</summary>
+      <ul class="filter-list">
+        <li>⭐⭐⭐⭐☆ & up</li>
+        <li>⭐⭐⭐☆☆ & up</li>
+        <li>⭐⭐☆☆☆ & up</li>
+        <li>⭐☆☆☆☆ & up</li>
+      </ul>
+    </details>
+
+    <!-- Manufacturer -->
+    <details open class="filter-group">
+      <summary class="filter-title">Manufacturer</summary>
+      <ul class="filter-list">
+        <li><label><input type="checkbox"> Manufacturer A</label></li>
+        <li><label><input type="checkbox"> Manufacturer B</label></li>
+        <li><label><input type="checkbox"> Manufacturer C</label></li>
+      </ul>
+    </details>
+  </aside>
+
+  <!-- Right Content -->
+  <div class="right-content">
+    
+    <div class="filter-bar">
+      <div class="item-count">
+        <strong>12,911</strong> items in <span class="category">Mobile accessory</span>
+      </div>
+      <div class="filter-options">
+        <label class="verified"><input type="checkbox"> Verified only</label>
+        <select class="sort-dropdown">
+          <option>Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest</option>
+        </select>
+        <div class="view-toggle">
+          <button class="grid-view"><i class="fas fa-th-large"></i></button>
+          <button class="list-view"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-tags">
+      <span class="tag">Samsung <i class="fas fa-times"></i></span>
+      <span class="tag">Apple <i class="fas fa-times"></i></span>
+      <span class="tag">Poco <i class="fas fa-times"></i></span>
+      <span class="tag">Metallic <i class="fas fa-times"></i></span>
+      <span class="tag">4 star <i class="fas fa-times"></i></span>
+      <span class="tag">3 star <i class="fas fa-times"></i></span>
+      <a href="#" class="clear-filters">Clear all filters</a>
+    </div>
+    <div class="alt-product-grid">
+
+  <div class="alt-product-card">
+    <img src="./media/Thumbnail 1.webp" alt="T-shirt">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$10.30</span>
+        <span class="old-price">$15.00</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <span class="rating-score">4.0</span>
+      </div>
+      <a href="product.html"><div class="alt-product-desc">T-shirts with multiple colors, for men</div></a>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="product.html"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alt-product-card">
+    <img src="./media/p2.png" alt="Jeans shorts">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$10.30</span>
+        <span class="old-price">$14.50</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <span class="rating-score">3.5</span>
+      </div>
+      <div class="alt-product-desc">Jeans shorts for men blue color</div>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alt-product-card">
+    <img src="./media/p3.jpg" alt="Winter coat">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$12.50</span>
+        <span class="old-price">$18.00</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-stroke"></i>
+        <i class="far fa-star"></i>
+        <span class="rating-score">3.8</span>
+      </div>
+      <div class="alt-product-desc">Brown winter coat medium size</div>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alt-product-card">
+    <img src="./media/p4.png" alt="Jeans bag">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$34.00</span>
+        <span class="old-price">$40.00</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <span class="rating-score">2.0</span>
+      </div>
+      <div class="alt-product-desc">Jeans bag for travel for men</div>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alt-product-card">
+    <img src="./media/p5.png" alt="Leather wallet">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$99.00</span>
+        <span class="old-price">$120.00</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <span class="rating-score">5.0</span>
+      </div>
+      <div class="alt-product-desc">Leather wallet</div>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alt-product-card">
+    <img src="./media/cam.png" alt="Camera">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$9.99</span>
+        <span class="old-price">$15.00</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-stroke"></i>
+        <i class="far fa-star"></i>
+        <span class="rating-score">3.7</span>
+      </div>
+      <div class="alt-product-desc">Canon camera black, 100x zoom</div>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alt-product-card">
+    <img src="./media/gam.webp" alt="Headset">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$8.99</span>
+        <span class="old-price">$12.00</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <span class="rating-score">2.0</span>
+      </div>
+      <div class="alt-product-desc">Headset for gaming with mic</div>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alt-product-card">
+    <img src="media/watch.png" alt="Smartwatch">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$10.30</span>
+        <span class="old-price">$14.00</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <span class="rating-score">3.0</span>
+      </div>
+      <div class="alt-product-desc">Smartwatch silver color modern</div>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="alt-product-card">
+    <img src="media/8.png" alt="Jeans bag">
+    <div class="product-info">
+      <div class="price-row">
+        <span class="current-price">$99.50</span>
+        <span class="old-price">$128.00</span>
+        <span class="wishlist"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <div class="alt-product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <span class="rating-score">4.8</span>
+      </div>
+      <div class="alt-product-desc">Jeans bag for travel for men</div>
+      <div class="alt-icon-product">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-right-left"></i></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- Pagination under the grid -->
+<div class="pagination-container">
+  <div class="items-per-page">
+    <label for="show-items">Show</label>
+    <select id="show-items">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+    </select>
+  </div>
+
+  <ul class="pagination">
+    <li class="page-item disabled"><a href="#">&#10094;</a></li>
+    <li class="page-item active"><a href="#">1</a></li>
+    <li class="page-item"><a href="#">2</a></li>
+    <li class="page-item"><a href="#">3</a></li>
+    <li class="page-item"><a href="#">&#10095;</a></li>
+  </ul>
+</div>
+
+ 
+  
+
+</div>
+  </div>
+
+
+     <section class="newsletter-section">
+    <h2>Subscribe on our newsletter</h2>
+    <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+    
+    <div class="subscribe-form">
+      <div class="input-wrapper">
+        <span class="email-icon"><i class="fas fa-envelope"></i></span>
+        <input type="email" placeholder="Email">
+      </div>
+      <button>Subscribe</button>
+    </div>
+  </section>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Brand Section -->
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="media/logo-symbol.png" alt="Brand Logo" />
+          <span class="brand-name">Brand</span>
+        </div>
+        <p>Best information about the company<br> goes here but now lorem ipsum is</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categories</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Partnership</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categories</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li>Help Center</li>
+            <li>Money Refund</li>
+            <li>Shipping</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div>
+          <h4>For users</h4>
+          <ul>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Settings</li>
+            <li>My Orders</li>
+          </ul>
+        </div>
+
+        <!-- App Download -->
+        <div class="get-app">
+          <h4>Get app</h4>
+          <img src="media/Group.png" alt="App Store" />
+          <img src="media/market-button.png" alt="Google Play" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>© 2023 Ecommerce.</p>
+    <div class="language-select">
+      <img src="https://flagcdn.com/us.svg" width="20" alt="English Flag" />
+      English <i class="fas fa-chevron-up"></i>
+    </div>
+  </div>
+  <script>
+     /* ================== MENU TOGGLE ================== */
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.getElementById('menu-items');
+
+    if (menuToggle && menuItems) {
+      menuToggle.addEventListener('click', function () {
+        menuItems.classList.toggle('show');
+      });
+    }
+  </script>
+  </body>
+</html>
